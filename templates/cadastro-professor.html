@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% load custom_tags %}
+{% block content %}
+
+<h2 class="titulo-1">Professores</h2>
+
+<button class="button1" type="button" name="myButton" data-bs-toggle="modal" data-bs-target="#modalProfessores"><i class="fas fa-plus m-1 text-success"></i>Novo professor</button>
+
+<table class="tg">
+    <colgroup>
+    <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th style="border-left: 1px solid #a7abfc;" class="tg-y6cf">Professor</th>
+        <th class="tg-y6cf">Disciplina</th>
+        <th class="tg-y6cf">Data de nascimento</th>
+        <th class="tg-y6cf">Salário</th>
+        <th style="width: 60px" class="tg-y6cf">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% if not chave_professores %}
+        <tr>
+          <td class="tg-0lax"></td>
+          <td class="tg-0lax"></td>
+          <td class="tg-0lax"></td>
+          <td class="tg-0lax"></td>
+          <td class="tg-0lax"></td>
+        </tr>
+        {% else %}
+          {% for professor in chave_professores %}
+          {% verifica_disciplina professor as disciplina %}
+          <tr>
+            <td class="tg-0lax texto-tabela">{{professor.nome}}</td>
+            <td class="tg-0lax texto-tabela">{{disciplina}}</td>
+            <td class="tg-0lax texto-tabela">{{professor.data_nascimento}}</td>
+            <td class="tg-0lax texto-tabela">R$ {{professor.salario|intcomma}}</td>
+            <td class="tg-0lax lixeira"> 
+              <a href="{% url 'chama_update_professor' professor.id %}"><i class="fas fa-edit edit"></i></a> 
+              <a href="{% url 'deletando_professor' professor.id %}" onclick="return confirm('Deseja realmente excluir o(a) professor(a) {{professor}}?')"><i class="fa fa-trash lixeira"></i></a> 
+            </td>
+          </tr>
+          {% endfor %}
+        {% endif %}
+    </tbody>
+    <tfoot class="tb-foot">
+        <tr>
+            <th class="tg-y6cf"></td>
+            <th class="tg-y6cf"></td>
+            <th class="tg-y6cf"></td>
+            <th class="tg-y6cf"></td>
+            <th class="tg-y6cf"></td>
+        </tr>
+    </tfoot>
+</table>
+
+{% endblock %}

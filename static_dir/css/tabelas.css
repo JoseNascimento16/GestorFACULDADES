@@ -1,0 +1,91 @@
+.tg {
+    border-collapse:collapse;
+    border-spacing:0;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.tg td {
+    border-color:#a7abfc;
+    border-style:solid;
+    border-width:1px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    color: rgb(68, 68, 68);
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+
+.tg th {
+    border-color:#d4d6fa;
+    border-style:solid;
+    border-width:1px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    color: #e9ebfa;
+    font-weight:bold;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+
+.tb-foot th {
+    border-color:#7b81f5;
+    border-style:solid;
+    border-width:1px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    color: #ced0fd;
+    font-weight:normal;
+    overflow:hidden;
+    padding:5px 2px;
+    word-break:normal;
+}
+
+.tg .tg-y6cf {
+    background-color:#7b81f5;
+    text-align:left;
+    vertical-align:top
+}
+
+.tg .tg-0lax {
+    text-align:left;
+    vertical-align:top
+}
+
+.texto-tabela{
+    color: #696868 !important;
+    font-weight: bold;
+}
+
+.texto-tabela a:hover{
+    color: #4947ca;
+}
+
+.visualizar {
+    color: #696868;
+    text-align: center !important;
+    margin-right: 10px;
+}
+.visualizar:hover{
+    color: #4947ca;
+}
+
+.lixeira {
+    color: #7b81f5;
+    text-align: center !important;
+    margin-left: 10px;
+}
+.lixeira:hover{
+    color: #f57b7b;
+}
+
+.edit {
+    color: #7b81f5;
+    text-align: center !important;
+}
+.edit:hover{
+    color: #65ce76;
+}

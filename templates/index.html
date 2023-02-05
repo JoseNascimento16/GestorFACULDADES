@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+{% block content %}
+
+<h2 class="titulo-1">Visão geral</h2>
+
+<table class="tg">
+    <colgroup>
+    <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th style="border-left: 1px solid #a7abfc;" class="tg-y6cf">Curso</th>
+        <th class="tg-y6cf">Nº de professores</th>
+        <th class="tg-y6cf">Nº de alunos</th>
+        <th class="tg-y6cf">Média de notas / curso</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% if not chave_cursos %}
+        <tr>
+          <td class="tg-0lax"></td>
+          <td class="tg-0lax"></td>
+          <td class="tg-0lax"></td>
+          <td class="tg-0lax"></td>
+        </tr>
+        {% else %}
+          {% for curso in chave_cursos %}
+          {% get_professores curso chave_professores as numero_professores %}
+          {% get_alunos curso chave_alunos as numero_alunos %}
+          {% get_media_por_curso curso chave_notas as media_notas_curso %}
+            <tr>
+              <td class="tg-0lax texto-tabela clear"> <a href="{% url 'entrando_curso' curso.id %}"> <i class="fas fa-eye visualizar"></i>{{curso.nome}} </a> </td>
+              <td class="tg-0lax texto-tabela">{{numero_professores}}</td>
+              <td class="tg-0lax texto-tabela">{{numero_alunos}}</td>
+              <td class="tg-0lax texto-tabela">{{media_notas_curso}}</td>
+            </tr>
+          {% endfor %}
+        {% endif %}
+    </tbody>
+    <tfoot class="tb-foot">
+        <tr>
+          <th class="tg-y6cf"></td>
+          <th class="tg-y6cf"></td>
+          <th class="tg-y6cf"></td>
+          <th class="tg-y6cf"></td>
+        </tr>
+    </tfoot>
+</table>
+
+{% endblock %}

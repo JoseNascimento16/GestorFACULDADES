@@ -1,0 +1,42 @@
+CURSO
+ - DISCIPLINA
+    - PROFESSOR
+    - ALUNO
+    - ALUNO
+    - ALUNO
+	- NOTA
+	- NOTA
+
+ - DISCIPLINA
+    - PROFESSOR
+    - ALUNO
+    - ALUNO
+    - ALUNO
+	- NOTA
+	- NOTA
+
+##############################
+
+CURSO
+  - nome (char)
+
+DISCIPLINA
+  - curso (foreignkey)
+  - nome (char)
+  
+PROFESSOR
+  - disciplina (foreignkey)
+  - nome (char)
+  - data nascimento (data)
+  - salario (int)
+
+ALUNO
+  - disciplina (many-to-many)
+  - nome (char)
+  - nº matricula (int)
+  - data nascimento (data)
+
+NOTAS
+  - aluno (foreignkey)
+  - disciplina (char)
+  - nota (int)

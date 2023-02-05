@@ -1,0 +1,13 @@
+.alert-danger ul{
+    margin: 0;
+}
+
+.label-input{
+    color: rgb(70, 70, 70);
+    font-weight: 600;
+}
+
+.titulo-aluno{
+    margin-left: 10px;
+    color: #7b81f5;
+}

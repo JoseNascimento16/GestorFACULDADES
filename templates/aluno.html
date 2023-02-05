@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+{% block content %}
+
+<h2 class="titulo-1">{{obj_aluno.nome}}</h2>
+
+<button class="button1" type="button" name="myButton" data-bs-toggle="modal" data-bs-target="#modalNotas"><i class="fas fa-plus m-1 text-success"></i>Adicionar nota</button>
+
+<table class="tg">
+    <colgroup>
+    <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th style="border-left: 1px solid #a7abfc;" class="tg-y6cf">Disciplina</th>
+        <th class="tg-y6cf">Nota</th>
+        <th style="width: 60px" class="tg-y6cf">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% if not lista_de_notas %}
+        <tr>
+          <td class="tg-0lax"></td>
+          <td class="tg-0lax"></td>
+          <td class="tg-0lax"></td>
+        </tr>
+        {% else %}
+          {% for nota_obj in lista_de_notas %}
+          <tr>
+            <td class="tg-0lax texto-tabela">{{nota_obj.disciplina}}</td>
+            <td class="tg-0lax texto-tabela">{{nota_obj.nota}}</td>
+            <td class="tg-0lax lixeira">
+              <a href="{% url 'chama_update_nota' nota_obj.id %}"><i class="fas fa-edit edit"></i></a> 
+              <a href="{% url 'deletando_nota' nota_obj.id %}" onclick="return confirm('Deseja realmente excluir esta nota?')"><i class="fa fa-trash lixeira"></i></a>
+            </td>
+          </tr>
+          {% endfor %}
+        {% endif %}
+    </tbody>
+    <tfoot class="tb-foot">
+        <tr>
+            <th class="tg-y6cf"></td>
+            <th class="tg-y6cf"></td>
+            <th class="tg-y6cf"></td>
+        </tr>
+    </tfoot>
+</table>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% load widget_tweaks %}
+
+{% if erro_form_aluno or form_aluno_populado %}
+    <script>
+        jQuery.noConflict();
+        jQuery(function($) {
+            $('#modalAlunos').modal('show');
+        });
+    </script>
+{% endif %}
+
+<div class="modal fade" id="modalAlunos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 titulo-modal" id="exampleModalLabel">Cadastro de aluno</h1>
+          <form><button type="submit" class="btn-close" data-bs-dismiss="modal" aria-label="Close" formaction="{% url 'alunos' %}"></button></form>
+        </div>
+        <form id="formAlunos" class="form-inline" action="{% url 'cadastra_aluno' %}" method="POST">
+            <div class="modal-body">
+            {% csrf_token %}
+            {% for campo in chave_form.visible_fields %}
+
+                <div class="col mb-2">
+                    <label class="label-input label-input-form-django bold" for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+                    {{campo|add_class:'form-control'}}
+                </div>
+
+                {% for error in campo.errors %}
+                <section class="alert alert-danger p-1 mt-1" role="alert"> {{ campo.errors }} </section>
+                {% endfor %}
+
+            {% endfor %}
+            </div>
+        
+            <div class="modal-footer">
+            {% if not form_aluno_populado %}
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            {% else %}
+                <button type="submit" class="btn btn-secondary" formaction="{% url 'alunos' %}">Cancelar</button>
+                <button type="submit" class="btn btn-primary" formaction="#">Atualizar</button>
+            {% endif %}
+            </div>
+
+        </form>
+      </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+{% block content %}
+
+<h2 class="titulo-1">{{obj_curso.nome}}</h2>
+
+<table class="tg">
+    <colgroup>
+    <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th style="border-left: 1px solid #a7abfc;" class="tg-y6cf">Disciplinas</th>
+        <th class="tg-y6cf">Professor</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        {% if not disciplinas_do_curso %}
+        <tr>
+            <td class="tg-0lax"></td>
+            <td class="tg-0lax"></td>
+        </tr>
+        {% else %}
+          {% for disciplina in disciplinas_do_curso %}
+          {% verifica_professor disciplina as professor %}
+            <tr>
+                <td class="tg-0lax texto-tabela clear"> <a href="{% url 'entrando_disciplina' disciplina.id %}"> <i class="fas fa-eye visualizar"></i>{{disciplina.nome}} </a> </td>
+                <td class="tg-0lax texto-tabela">{{professor}}</td>
+            </tr>
+          {% endfor %}
+        {% endif %}
+      
+    </tbody>
+    <tfoot class="tb-foot">
+        <tr>
+            <th class="tg-y6cf"></td>
+            <th class="tg-y6cf"></td>
+        </tr>
+    </tfoot>
+</table>
+
+{% endblock %}

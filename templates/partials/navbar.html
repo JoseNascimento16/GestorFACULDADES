@@ -1,0 +1,24 @@
+{% load static %}
+<nav class="menu" id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+      <li><a href="{% url 'index' %}">Home</a></li>
+      <li><a href="{% url 'cursos' %}">Cursos</a>
+        <!-- <ul class='sub-menus'>
+          <li><a href='#'>Products 1</a></li>
+          <li><a href='#'>Products 2</a></li>
+          <li><a href='#'>Products 3</a></li>
+          <li><a href='#'>Products 4</a></li>
+        </ul> -->
+      </li>
+      <li><a href="{% url 'disciplinas' %}">Disciplinas</a></li>
+      <li><a href="{% url 'professores' %}">Professores</a>
+        <!-- <ul class='sub-menus'>
+          <li><a href='#'>Services 1</a></li>
+          <li><a href='#'>Services 2</a></li>
+          <li><a href='#'>Services 3</a></li>
+        </ul> -->
+      </li>
+      <li><a href="{% url 'alunos' %}">Alunos</a></li>
+    </ul>
+</nav>

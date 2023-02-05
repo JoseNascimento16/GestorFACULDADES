@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+{% block content %}
+
+<h2 class="titulo-1">{{obj_disciplina.nome}}</h2>
+
+{% verifica_professor obj_disciplina as professor %}
+<h5>Professor: {{professor}}</h5>
+
+<table class="tg">
+    <colgroup>
+    <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th style="border-left: 1px solid #a7abfc;" class="tg-y6cf">Alunos</th>
+        <th class="tg-y6cf">Nota</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% if not alunos_da_disciplina %}
+        <tr>
+          <td class="tg-0lax"></td>
+          <td class="tg-0lax"></td>
+        </tr>
+        {% else %}
+          {% for aluno in alunos_da_disciplina %}
+          {% get_notas obj_disciplina aluno as nota_obj %}
+          <tr>
+            <td class="tg-0lax texto-tabela clear"> <a href="{% url 'entrando_aluno' aluno.id %}"> <i class="fas fa-eye visualizar"></i> {{aluno.nome}} </a> </td>
+            <td class="tg-0lax texto-tabela">{{nota_obj.nota}}</td>
+          </tr>
+          {% endfor %}
+        {% endif %}
+    </tbody>
+    <tfoot class="tb-foot">
+        <tr>
+            <th class="tg-y6cf"></td>
+            <th class="tg-y6cf"></td>
+        </tr>
+    </tfoot>
+</table>
+
+{% endblock %}
