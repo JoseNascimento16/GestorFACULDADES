@@ -5,3 +5,8 @@
 .titulo-1 {
     color: #7178fd;
 }
+
+.titulo-2 {
+    color: rgb(97, 96, 96);
+    margin: 5px 0 5px 0 !important;
+}

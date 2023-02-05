@@ -71,10 +71,12 @@ def entra_disciplina(request, **kwargs):
     professor = disciplina.professor_set.first
     alunos = disciplina.aluno_set.all()
     notas = Nota.objects.filter(disciplina=disciplina.id)
+    quant_alunos = len(alunos)
     contexto = {
         'obj_disciplina': disciplina,
         'obj_professor' : professor,
         'alunos_da_disciplina' : alunos,
-        'notas_da_disciplina' : notas
+        'notas_da_disciplina' : notas,
+        'quant_alunos' : quant_alunos,
     }
     return render(request, 'disciplina.html', contexto)
