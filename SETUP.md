@@ -1,28 +1,42 @@
-<h1 align="center">Sistema Gestor de Faculdades</h1>
+<h1 align="center">Configuração</h1>
 
-## About ![pin-img](https://user-images.githubusercontent.com/110631271/215866770-755c96a6-17fa-4a7c-9c05-23693843f01c.png)
+    Seguem abaixo as instruções para rodar essa aplicação localmente:
+    
+- ### Requisitos
 
-The Sistema Gestor de Faculdades was developed in 4 days as an exercise. Its a mannagement system that can manage Courses, disciplines, professors, students and their grades.
+     Sistema operacional Windows
 
-## Used technologies ![pin-img](https://user-images.githubusercontent.com/110631271/215866770-755c96a6-17fa-4a7c-9c05-23693843f01c.png)
-<li>Python 3.9</li>
-<li>Django 4.1</li>
-<li>Javacript</li>
-<li>HTML and CSS</li>
-<li>Bootstrap</li>
-<li>PostgreSQL</li>
+- ### Download dos arquivos
 
-## Functionalities ![pin-img](https://user-images.githubusercontent.com/110631271/215866770-755c96a6-17fa-4a7c-9c05-23693843f01c.png)
+     Efetue o download da pasta do repositório do projeto e salve em sua máquina.
 
-- Basic CRUD (Create, read, update, delete) of all entities: Courses, disciplines, professors, students, grades using Bootstrap MODALS.
-- A table for each entity and their attributes
-- A table containing all the courses showing the number of professors, students and their mean grade for each course.
-- A table listing the discipline professor, students and their grades
+## MÉTODO 1
 
-## Business rules ![pin-img](https://user-images.githubusercontent.com/110631271/215866770-755c96a6-17fa-4a7c-9c05-23693843f01c.png)
+- Execute o arquivo SetupMETODO_1.bat como ADMINISTRADOR
+- Aguarde o término da configuração
+- Ao final do processo o servidor já deverá estar configurado e rodando
+- No seu navegador acesse: http://127.0.0.1:8000/
 
-- Each course can have many disciplines.
-- Each discipline can have only 1 professor and many students.
-- A student can be registered on any discipline of its course.
-- On Course removal, its disciplines and students grades are removed as well.
+## MÉTODO 2
+
+O método 2 só será necessário se:
+
+     O método 1 falhar em instalar o Python por qualquer motivo que seja.
+   
+     Sua máquina já possuir o Python instalado.
+
+- Instalação do Python: (caso ainda não tenha instalado na máquina)
+
+       Baixe a versão mais recente do Python em: https://www.python.org/downloads/
+
+       Na primeira tela de instalação, marque a checkbox: 
+     
+       Add Python.exe to PATH.
+
+       Escolha a primeira opção de instalação.
+
+- Execute o arquivo SetupMETODO_2.bat como ADMINISTRADOR
+- Aguarde o término da configuração
+- Ao final do processo o servidor já deverá estar configurado e rodando
+- No seu navegador acesse: http://127.0.0.1:8000/
 
