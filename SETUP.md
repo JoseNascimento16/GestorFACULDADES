@@ -23,7 +23,7 @@ O método 2 só será necessário se:
 
      O método 1 falhar em instalar o Python por qualquer motivo que seja.
    
-     Sua máquina já possuir o Python instalado.
+     Sua máquina já possuir o Python instalado (método 1).
 
 - Instalação do Python: (caso ainda não tenha instalado na máquina)
 
