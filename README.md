@@ -26,3 +26,11 @@ The Sistema Gestor de Faculdades was developed in 4 days as an exercise. Its a m
 - A student can be registered in any subject of his course.
 - On a course removal, its subjects and students grades are removed as well.
 - On a subject removal, the students grades related to it are removed too.
+
+
+![image](https://user-images.githubusercontent.com/110631271/217020234-238d15f9-a2a3-470e-a7e3-f69dd67fc2f6.png)
+
+![image](https://user-images.githubusercontent.com/110631271/217021098-de5fbb6e-99f7-427d-86ec-576392181a4c.png)
+
+![image](https://user-images.githubusercontent.com/110631271/217020779-949fe715-26d0-4b43-b2dd-779e6ca135f1.png)
+
