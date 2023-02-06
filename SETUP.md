@@ -19,17 +19,21 @@
 
 ## MÉTODO 2
 
-O método 2 só será necessário se o método 1 falhar em instalar o Python por qualquer motivo que seja.
+O método 2 só será necessário se:
+
+     O método 1 falhar em instalar o Python por qualquer motivo que seja.
+   
+     Sua máquina já possuir o Python instalado.
 
 - Instalação do Python:
 
-     Baixe a versão mais recente do Python em: https://www.python.org/downloads/
+       Baixe a versão mais recente do Python em: https://www.python.org/downloads/
 
-     Na primeira tela de instalação, marque a checkbox: 
+       Na primeira tela de instalação, marque a checkbox: 
      
-     - Add Python.exe to PATH.
+       Add Python.exe to PATH.
 
-     Escolha a primeira opção de instalação.
+       Escolha a primeira opção de instalação.
 
 - Execute o arquivo SetupMETODO_2.bat como ADMINISTRADOR
 - Aguarde o término da configuração
