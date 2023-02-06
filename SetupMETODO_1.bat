@@ -1,12 +1,10 @@
-if not exist "C:\Python39\python.exe" (
+if not exist "C:\Program Files\Python39-32\python.exe" (
 
 echo Baixando o Python...
 curl -o C:/python-3.9.2.exe https://www.python.org/ftp/python/3.9.2/python-3.9.2.exe
 
 echo Instalando o Python...
 start /wait C:/python-3.9.2.exe /quiet InstallAllUsers=1 PrependPath=1
-
-del C:/python-3.9.2.exe
 
 )
 
