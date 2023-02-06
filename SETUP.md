@@ -25,7 +25,7 @@ O método 2 só será necessário se:
    
      Sua máquina já possuir o Python instalado.
 
-- Instalação do Python:
+- Instalação do Python: (caso ainda não tenha instalado na máquina)
 
        Baixe a versão mais recente do Python em: https://www.python.org/downloads/
 
