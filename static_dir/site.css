@@ -11,10 +11,12 @@
 @import url(css/tabelas.css);
 @import url(css/modal.css);
 @import url(css/forms.css);
+@import url(css/header.css);
 
 body{
     margin: 0px;
     min-width: 368px;
+    background-color: rgba(221, 221, 221, 0.308);
   }
   
 * {
