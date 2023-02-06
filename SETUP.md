@@ -1,28 +1,19 @@
-<h1 align="center">Sistema Gestor de Faculdades</h1>
+<h1 align="center">Configuração</h1>
 
-## About ![pin-img](https://user-images.githubusercontent.com/110631271/215866770-755c96a6-17fa-4a7c-9c05-23693843f01c.png)
+    Seguem abaixo as instruções para rodar essa aplicação localmente:
 
-The Sistema Gestor de Faculdades was developed in 4 days as an exercise. Its a mannagement system that can manage Courses, disciplines, professors, students and their grades.
+- ### Download dos arquivos
 
-## Used technologies ![pin-img](https://user-images.githubusercontent.com/110631271/215866770-755c96a6-17fa-4a7c-9c05-23693843f01c.png)
-<li>Python 3.9</li>
-<li>Django 4.1</li>
-<li>Javacript</li>
-<li>HTML and CSS</li>
-<li>Bootstrap</li>
-<li>PostgreSQL</li>
+     Baixe a pasta do repositório do projeto e salve em sua máquina.
 
-## Functionalities ![pin-img](https://user-images.githubusercontent.com/110631271/215866770-755c96a6-17fa-4a7c-9c05-23693843f01c.png)
+- ### Instalação do Python:
 
-- Basic CRUD (Create, read, update, delete) of all entities: Courses, disciplines, professors, students, grades using Bootstrap MODALS.
-- A table for each entity and their attributes
-- A table containing all the courses showing the number of professors, students and their mean grade for each course.
-- A table listing the discipline professor, students and their grades
+     Baixe a versão mais recente do Python em: https://www.python.org/downloads/
 
-## Business rules ![pin-img](https://user-images.githubusercontent.com/110631271/215866770-755c96a6-17fa-4a7c-9c05-23693843f01c.png)
+     Na primeira tela de instalação, marque a checkbox: 
+     
+     - Add Python.exe to PATH.
 
-- Each course can have many disciplines.
-- Each discipline can have only 1 professor and many students.
-- A student can be registered on any discipline of its course.
-- On Course removal, its disciplines and students grades are removed as well.
+     Escolha a primeira opção de instalação.
+
 
