@@ -4,7 +4,7 @@
     
 - ### Requisitos
 
-     Sistema operacional Windows
+     Sistema operacional Windows 10 ou superior
 
 - ### Download dos arquivos
 
