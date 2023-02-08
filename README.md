@@ -27,6 +27,8 @@ The Sistema Gestor de Faculdades was developed in 4 days as an exercise. Its a m
 - On a course removal, its subjects and students grades are removed as well.
 - On a subject removal, the students grades related to it are removed too.
 
+#### * In the SETUP.md file, there are instructions on how to run the application locally in just few steps.
+
 ![image](https://user-images.githubusercontent.com/110631271/217045458-0286377e-846f-4685-87d0-feb76993e612.png)
 
 ![image](https://user-images.githubusercontent.com/110631271/217045056-c248c5c7-4b5f-440e-9b46-7c428a7eab1d.png)
